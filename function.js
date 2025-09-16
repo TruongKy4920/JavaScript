@@ -4,7 +4,7 @@ function maxx(a,b){
     if(a>b) return a;
     else return b;
 }
-function greet()S{
+function greet(){
     console.log("Hello World");
 }
 let temp =maxx(a,b);
