@@ -1,16 +1,21 @@
-//camel annotation: oneTwoThree
-//Pascal annotation: OneTwoThree
-function Circle(Radius){
-    this.Radius=Radius;
-    this.draw=function(){
-        console.log('draw');
-    }
+// Đặc tính cấp phát động của JS
+// -Ta có thể thêm hoặc xóa thuộc tính/hàm của JS bất kỳ lúc nào 
+let circle={
+    radius: 1
+};
+//có thể thấy là khai báo 1 circle chỉ có 1 thuộc tính radius
+//nhưng 2 dòng dưới cho phép thêm hàm draw và thuộc tính color thì lúc này
+//Obj circle có 3 thuộc tính là radius, color và draw
+circle.color='yellow';
+circle.draw=function(){
+    console.log('draw');
 }
 
-const Circle1=new Circle(3);
-console.log(Circle1);
-// Dùng toán tử new sẽ có 2 thứ diễn ra (toán tử this là 1 reference)
-//JS cấp phát động 1 đối tượng rỗng trên heap -> Circle1={};
-//-> vào hàm constructor (sử dụng sau toán tử new) -> Từ "this" cấp phát động thuộc tính/hàm cho obj
-// -> trỏ tới đối tượng rỗng để thêm property cho đối tượng
-//ĐƠN GIẢN THÌ ĐÂY LÀ HÀM TẠO CẤP PHÁT ĐỘNG GIỐNG C++
+//Có thể xóa đi thuộc tính bất kỳ bằng toán tử delete
+delete circle.color;
+delete circle.radius;
+
+console.log(circle);
+
+
+
