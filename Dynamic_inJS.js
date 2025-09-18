@@ -41,7 +41,10 @@ OBJECT LITERAL SYNTAX (CÚ PHÁP TẠO OBJ TRONG JS)
    V
 let x= {};
 
--> JavaS sẽ hiểu là x= new Object();
+-> JavaS sẽ hiểu là x= new Object(); 
+
+***function Object(){} là một constructor function được xây sẵn trong JS, bất cứ đối tượng nào xài object Literal đều sử dụng function object này.
+
 TRONG JAVASCRIPT CÓ HÀM TẠO OBJECT (OBJECT CONSTRUCTOR, đây là hàm có sẵn của JS) khi ta sử dụng OBJECT LITERAL
 
 ->Khi ta tạo obj circle từ hàm Factory Function(Factory Func có trả về OBJ Literal) --> JS ngầm tự động sử dụng hàm (OBJECT CONSTRUCTOR) 
