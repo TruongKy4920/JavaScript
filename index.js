@@ -1,9 +1,25 @@
-const numbers=[1,2,3];
-console.log(numbers); //se xuat ra kieu mang [1,2,3]
-const joined= numbers.join(',');
-console.log(joined); //se xuat ra chuoi 1,2,3 (cac phan tu noi nhau bang ',')
+const nums=[1,3,2,4];
+console.log(nums.sort());
+console.log(nums.reverse());
 
-const mess='This is first mess';
-const splitted=mess.split(' ');// gặp kí tự khoảng trắng là sẽ tách ra làm 1 phần tử của mảng
-console.log(splitted); // xuất ra mảng ["This","is",...];
-console.log(splitted.join('-')); //xuất ra chuỗi This-is-first-message.
+const nums2= nums.sort((a,b)=>{
+    if(a>b) return 1;
+    if(a<b) return -1;
+    return 0;
+}); //sort tang dan
+const nums3= nums.sort((a,b)=>{
+    if(a>b) return 1;
+    if(a<b) return -1;
+    return 0;
+}); //sort giam dan
+console.log(nums3);
+
+const courses=[{id: 1, name:'a'},{id: 2, name:'b'}];
+const course= courses.sort((a,b)=>{
+    const nameA=a.name.toLowerCase();
+    const nameB=b.name.toLowerCase();
+    if(a.name>b.name) return 1;
+    if(a.name<b.name) return -1;
+    return 0;
+}); //sort tang dan
+console.log(course);
