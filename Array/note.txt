@@ -1,0 +1,30 @@
+Mảng  javascript lưu bất cứ kiểu dữ liệu (trong cùng 1 mảng)
+[4 , 3.2, "kytruong", {ten: 'ky' ho: 'truong}];
+const arr=[3,4] -> Được thay đổi giá trị/giá trị phần tử arry nhưng không được đổi địa chỉ mảng
+
+not allow --> arr=[]; (không cho gán lại mảng rỗng mới hoặc mảng mới)
+
+hàm thêm phần tử cuối mảng push
+-> arr.push(6,7) (push bao nhiêu tham số cũng được) -> arr=[3,4,6,7];
+hàm thêm phần tử đàu mảng unshift
+->arr.unshift(1,2) (unshift bao nhiêu tham số cũng được) -> arr=[1,2,3,4,6,7];
+Hàm splice (có chức năng xóa và thêm phần tử theo index chèn)
+"para 1->index start" "para 2 -> số phần tử mảng cần xóa" "para 3 -> số lượng phần tử cần add "
+->arr.splice(3,0,'a','b'); => arr=[1,2,3,4,a,b,6,7]; 
+
+-----------------------------------------------------
+[1,2,3,1,4,a,b,6,7];
+Hàm tìm phần tử indexOf-> hàm trả về index cần tìm hoặc -1 nếu không có.
+arr.indexOf(3); -> return 2;
+arr.indexOf(1,2) (tìm phần tử giá trị 1 từ index số 2 trở đi)
+Hàm tìm và trả về vị trí lần cuối phần tử cần tìm xuất hiện
+
+arr.lastIndexOf(1); -> return 3;
+Hàm kiểm tra phần tử có trong mảng hay không (true, false)
+arr.includes(b); -> return true;
+
+const obj_list=[{id: 1, name:'a'},{id: 2, name:'b'}];
+Xài includes để tìm kdl reference không ổn vì khi tìm sẽ so địa chỉ của 2 obj khác nhau 
+--> obj_list.includes( {id: 1 , name:'a'}) thì sẽ ra false vì địa chỉ {id: 1 , name:'a'} trong includes khác 
+địa chỉ {id: 1 , name:'a'}  trong mảng obj_list --> xài find 
+
