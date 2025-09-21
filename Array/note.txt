@@ -4,13 +4,18 @@ const arr=[3,4] -> Được thay đổi giá trị/giá trị phần tử arry n
 
 not allow --> arr=[]; (không cho gán lại mảng rỗng mới hoặc mảng mới)
 
-hàm thêm phần tử cuối mảng push
+hàm thêm/xóa phần tử cuối mảng push,pop
 -> arr.push(6,7) (push bao nhiêu tham số cũng được) -> arr=[3,4,6,7];
-hàm thêm phần tử đàu mảng unshift
+hàm thêm/xóa phần tử đàu mảng unshift/ shift
 ->arr.unshift(1,2) (unshift bao nhiêu tham số cũng được) -> arr=[1,2,3,4,6,7];
 Hàm splice (có chức năng xóa và thêm phần tử theo index chèn)
 "para 1->index start" "para 2 -> số phần tử mảng cần xóa" "para 3 -> số lượng phần tử cần add "
 ->arr.splice(3,0,'a','b'); => arr=[1,2,3,4,a,b,6,7]; 
+*Còn muốn xóa thì chỉ cần splice(3,3) -> xóa 3 phần tử bắt đầu từ vị trí số 3.
+
+Xóa sạch mảng 2 cách:
+arr.splice(0,arr.length);
+arr.length=0;
 
 -----------------------------------------------------
 [1,2,3,1,4,a,b,6,7];
@@ -27,4 +32,36 @@ const obj_list=[{id: 1, name:'a'},{id: 2, name:'b'}];
 Xài includes để tìm kdl reference không ổn vì khi tìm sẽ so địa chỉ của 2 obj khác nhau 
 --> obj_list.includes( {id: 1 , name:'a'}) thì sẽ ra false vì địa chỉ {id: 1 , name:'a'} trong includes khác 
 địa chỉ {id: 1 , name:'a'}  trong mảng obj_list --> xài find 
+
+----------------------------------
+
+Nối mảng bằng Concat
+ar1=[1,2];
+ar2=[3,4];
+ar1.concat(ar2); -> tạo 1 mảng mới chứa giá trị của 2 mảng
+const combinded=ar1.concat(ar2);-> [1,2,3,4];
+
+cắt 1 phần chỉ định mảng slice
+const sliced=combinded.slice(2,4) -> trả về 1 mảng mới có giá trị từ vị trí 2-4
+
+2 hàm này sẽ copy giá trị của mảng kdl primitve và cho vào mảng mới
+-> Ngược lại với mảng reference thì nó sẽ copy địa chỉ của từng phần từ và cho vào mảng mới
+
+Toán tử spread ... là cách đơn giản hơn để nối mảng 
+combinded=[...ar1,...ar2] -> spread sẽ copy giá trị từng phần tử của mảng ar1&2 và cho vào mảng mới
+và có thể sáng tạo hơn bằng cách combinded=[...ar1,'a',...ar2,{id:2 , name: 'b'}]
+->[1,2,a,3,4,{id:2,name: b}];
+
+----------------
+Cách duyệt mảng
+C1 xài for of loop
+C2: sử dụng method forEach
+forEach giống find là ta phải cho 1 callback function làm tham số
+-> ar1.forEach( (number,index)=> { //để xuất giá trị là tham số 1, tham số 2 là vị trí của từng phần tử(có thể bỏ index) 
+                            console.log(number,index);
+                            }
+                        );
+
+ 
+
 
