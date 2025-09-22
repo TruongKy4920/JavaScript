@@ -5,6 +5,7 @@ function include_fake(arr,num){
         if(arr[i]==num) return true; 
         i++;
     }
+    return false;
 }
 
-console.log(include_fake(arr1,2));
+console.log(include_fake(arr1,4));
