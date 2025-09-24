@@ -13,6 +13,8 @@ Hàm splice (có chức năng xóa và thêm phần tử theo index chèn)
 ->arr.splice(3,0,'a','b'); => arr=[1,2,3,4,a,b,6,7]; 
 *Còn muốn xóa thì chỉ cần splice(3,3) -> xóa 3 phần tử bắt đầu từ vị trí số 3.
 
+SPLICE KHI XÓA SẼ TRẢ VỀ CÁC PHẦN TỬ ĐÃ BỊ XÓA TRONG 1 MẢNG MỚI
+
 Xóa sạch mảng 2 cách:
 arr.splice(0,arr.length);
 arr.length=0;
